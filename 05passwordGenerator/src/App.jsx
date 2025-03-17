@@ -56,7 +56,7 @@ function App() {
             Copy
           </button>
         </div>
-        <div className="flex text-sm gap-x-2">
+        <div className="flex text-sm gap-x-2 py-3">
           <div className="flex items-center gap-x-1">
             <input
               type="range"
