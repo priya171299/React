@@ -13,7 +13,7 @@ function App() {
   const passwordRef = useRef(null);
 
   //useCallback
-  const passwordGenerator = useCallback(()=> {
+  const passwordGenerator = useCallback(() => {
     let pass = "";
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     if (numAllowed) str += "0123456789";
@@ -27,6 +27,7 @@ function App() {
 
   const copyPasswordToClipboard = useCallback(() => {
     passwordRef.current?.select();
+    passwordRef.current?.setSelectionRange(0, 10);
     window.navigator.clipboard.writeText(password);
   }, [password]);
 
@@ -51,7 +52,7 @@ function App() {
           />
           <button
             onClick={copyPasswordToClipboard}
-            className="bg-blue-600 text-white ouline-none py-0.5 px-3 rounded-lg shrink-0"
+            className="bg-blue-600 text-white ouline-none py-0.5 px-3 rounded-lg shrink-0 hover:bg-sky-800 cursor-pointer"
           >
             Copy
           </button>
