@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-//import { useLoaderData } from "react-router-dom";
+// import { useLoaderData } from "react-router-dom";
 
 function Github() {
-  //const data = useLoaderData();
+  //   const data = useLoaderData();
   const [data, setData] = useState({});
   useEffect(() => {
     try {
