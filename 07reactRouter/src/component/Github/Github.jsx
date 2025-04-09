@@ -17,14 +17,11 @@ function Github() {
     }
   }, []);
   return (
-    <div className="text-3xl text-center bg-gray-700 p-4 text-white">
+    <div className=" text-3xl text-center bg-gray-700 p-4 text-white">
       Github Followers : {data.followers}
-      <img
-        className="flex-auto justify-center items-center my-1"
-        src={data.avatar_url}
-        alt="git picture"
-        width={300}
-      />
+      <div className="flex justify-center items-center p-4">
+        <img src={data.avatar_url} alt="git picture" width={300} />
+      </div>
     </div>
   );
 }
